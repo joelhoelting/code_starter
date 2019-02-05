@@ -63,7 +63,7 @@ if ! [ -z $fileroot ]; then
     mkdir $language_directory
   fi
 
-  filename=$date_${fileroot}${extension}
+  filename=${date}_${fileroot}${extension}
   full_filename=${language_directory}/${filename}
 
   open_file $full_filename $language
