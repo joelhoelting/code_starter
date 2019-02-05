@@ -2,6 +2,7 @@
 
 usage_statement="Usage: 'code_starter js|rb|py|php|cpp"
 root_directory=$( dirname $0 )
+date=$(date +'%d-%m-%y')
 
 open_file() {
   local filename=$1
@@ -45,7 +46,7 @@ case $language in
 esac
 
 code_directory=$root_directory/code
-language_directory=$code_directory/$language/
+language_directory=$code_directory/$language
 
 read -p "Entire filename (extension automatically generated): " fileroot
 
@@ -62,8 +63,8 @@ if ! [ -z $fileroot ]; then
     mkdir $language_directory
   fi
 
-  filename=${fileroot}${extension}
-  full_filename=${language_directory}${filename}
+  filename=$date_${fileroot}${extension}
+  full_filename=${language_directory}/${filename}
 
   open_file $full_filename $language
 else 
