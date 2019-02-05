@@ -1,7 +1,7 @@
 #!/bin/bash
 
 usage_statement="Usage: 'code_starter js|rb|py|php|cpp"
-root_directory=$(pwd)
+root_directory=$( dirname $0 )
 
 open_file() {
   local filename=$1
