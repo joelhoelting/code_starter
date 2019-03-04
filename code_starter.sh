@@ -1,6 +1,6 @@
 #!/bin/bash
 
-usage_statement="Usage: 'code_starter js|rb|py|php|cpp"
+usage_statement="Usage: 'code_starter js|rb|py|php"
 root_directory=$( dirname $0 )
 date=$(date +'%d-%m-%y')
 
@@ -35,9 +35,6 @@ case $language in
     ;;
   php)
     extension='.php'
-    ;;
-  cpp)
-    extension='.cpp'
     ;;
   *)
     echo 'Invalid Option'
