@@ -2,7 +2,6 @@
 
 usage_statement="Usage: 'code_starter js|rb|py|php|cpp"
 root_directory=$( dirname $0 )
-date=$(date +'%d-%m-%y')
 
 open_file() {
   local filename=$1
@@ -63,7 +62,7 @@ if ! [ -z $fileroot ]; then
     mkdir $language_directory
   fi
 
-  filename=${date}_${fileroot}${extension}
+  filename=${fileroot}${extension}
   full_filename=${language_directory}/${filename}
 
   open_file $full_filename $language
